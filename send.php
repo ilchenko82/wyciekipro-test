@@ -8,8 +8,8 @@ $to_email = "s.ilchenko.mb@gmail.com";
 $subject = "Nowe zgłoszenie - WyciekiPro";
 
 // Telegram settings
-$telegram_token = "INSERT_BOT_TOKEN_HERE"; // Put your Bot Token here
-$telegram_chat_id = "INSERT_CHAT_ID_HERE"; // Put your Chat ID here
+$telegram_token = "8842182451:AAGOnGbzS5z-gP2CSoHkUQfnMiTwbPv21HM"; // Put your Bot Token here
+$telegram_chat_id = "6676677078"; // Put your Chat ID here
 
 // Read POST data
 $name = isset($_POST['name']) ? trim($_POST['name']) : '';
