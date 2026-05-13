@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WyciekiPro — Profesjonalne Wykrywanie Wycieków Wody</title>
+  <meta name="description"
+    content="Profesjonalne wykrywanie wycieków wody w Warszawie i okolicach. Nowoczesny sprzęt, szybka reakcja, bezinwazyjne metody. Zadzwoń teraz!">
+  <link rel="canonical" href="https://wyciekipro.pl/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="WyciekiPro — Profesjonalne Wykrywanie Wycieków Wody">
+  <meta property="og:description" content="Profesjonalne wykrywanie wycieków wody w Warszawie i okolicach. Nowoczesny sprzęt, szybka reakcja, bezinwazyjne metody. Zadzwoń teraz!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wyciekipro.pl/">
+  <meta property="og:image" content="https://wyciekipro.pl/images/hero/hero_pc@1x.jpg">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PlumbingService",
+    "name": "WyciekiPro",
+    "image": "https://wyciekipro.pl/images/hero/hero_pc@1x.jpg",
+    "@id": "https://wyciekipro.pl/",
+    "url": "https://wyciekipro.pl/",
+    "telephone": "+48793499678",
+    "email": "kontakt@wyciekipro.pl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Warszawa",
+      "addressCountry": "PL"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Warszawa"
+      },
+      {
+        "@type": "Country",
+        "name": "Poland"
+      }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/layout/grid.css">
+  <link rel="stylesheet" href="css/layout/responsive.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/services.css">
+  <link rel="stylesheet" href="css/components/equipment.css">
+  <link rel="stylesheet" href="css/components/process.css">
+  <link rel="stylesheet" href="css/components/cases.css">
+  <link rel="stylesheet" href="css/components/pricing.css">
+  <link rel="stylesheet" href="css/components/gallery.css">
+  <link rel="stylesheet" href="css/components/reviews.css">
+  <link rel="stylesheet" href="css/components/contact.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/animations/animations.css">
+</head>
+
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo" id="logo">
+        <span class="header__logo-icon">
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M10 0C10 0 1 10.5 1 15.5C1 20.194 5.03 24 10 24C14.97 24 19 20.194 19 15.5C19 10.5 10 0 10 0Z"
+              fill="white" />
+            <path d="M13.5 18C13.5 16.07 12.43 14.4 10.83 13.56" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"
+              stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="header__logo-text">Wycieki<span>Pro</span></span>
+      </a>
+      <nav class="nav" id="main-nav">
+        <a href="#services" class="nav__link">Usługi</a>
+        <a href="#equipment" class="nav__link">Sprzęt</a>
+        <a href="#process" class="nav__link">Jak Szukamy</a>
+        <a href="galeria.html" class="nav__link">Galeria</a>
+        <a href="#pricing" class="nav__link">Cennik</a>
+        <a href="#reviews" class="nav__link">Opinie</a>
+        <a href="#contact" class="nav__link">Kontakt</a>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switch" id="lang-switch">
+          <button class="lang-switch__btn active" data-lang="pl">PL</button>
+          <button class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="tel:+48793499678" class="header__phone" id="header-phone">
+          <span class="header__phone-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></span>
+          <span class="header__phone-number">+48 793 499 678</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" class="nav__link">Usługi</a>
+    <a href="#equipment" class="nav__link">Sprzęt</a>
+    <a href="#process" class="nav__link">Jak Szukamy</a>
+    <a href="galeria.html" class="nav__link">Galeria</a>
+    <a href="#pricing" class="nav__link">Cennik</a>
+    <a href="#reviews" class="nav__link">Opinie</a>
+    <a href="#contact" class="nav__link">Kontakt</a>
+    <a href="tel:+48793499678" class="btn btn--phone mobile-menu__phone"><svg width="18" height="18" viewBox="0 0 24 24"
+        fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg> +48 793 499 678</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-image">
+      <picture>
+        <!-- Mobile (до 576px) -->
+        <source media="(max-width: 576px)"
+          srcset="images/hero/hero_mobile@1x.jpg 1x, images/hero/hero_mobile@2x.jpg 2x">
+        <!-- Tablet (до 1024px) -->
+        <source media="(max-width: 1024px)"
+          srcset="images/hero/hero_tablet@1x.jpg 1x, images/hero/hero_tablet@2x.jpg 2x">
+        <!-- Desktop (fallback) -->
+        <img src="images/hero/hero_pc@1x.jpg" srcset="images/hero/hero_pc@1x.jpg 1x, images/hero/hero_pc@2x.jpg 2x"
+          alt="Profesjonalne wykrywanie wycieków wody — WyciekiPro" loading="eager" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="hero__drops">
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge"><span class="pulse-dot"></span> Dostępni 24/7 · WhatsApp</div>
+        <h1 class="hero__title">Profesjonalne <span class="highlight">Wykrywanie Wycieków</span> Wody</h1>
+        <p class="hero__subtitle">Szybko i precyzyjnie lokalizujemy miejsce awarii — unikamy zbędnego kucia ścian i
+          podłóg, otwierając je tylko tam, gdzie to konieczne. Każde badanie kończymy <strong>protokołem z dokumentacją
+            zdjęciową i wideo</strong> dla ubezpieczyciela.</p>
+        <div class="hero__cta">
+          <a href="tel:+48793499678" class="btn btn--primary btn--lg" id="hero-cta-call"><svg width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg> Zadzwoń Teraz</a>
+          <a href="#contact" class="btn btn--ghost btn--lg" id="hero-cta-form" onclick="openModal(event)">Wyślij
+            Zgłoszenie</a>
+        </div>
+        
+        <div class="hero__insurance-banner">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero__insurance-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Koszt usługi możesz odzyskać od ubezpieczyciela.</strong> Wystawiamy protokół badań oraz dokumentację zdjęciową, niezbędne do uzyskania odszkodowania z polisy.</span>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__number"><span class="counter-animated" data-target="500">0</span><span
+                class="accent">+</span></div>
+            <div class="stat__label">Wykrytych wycieków</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number"><span class="counter-animated" data-target="12">0</span></div>
+            <div class="stat__label">Lat doświadczenia</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number"><span class="counter-animated" data-target="98">0</span><span
+                class="accent">%</span></div>
+            <div class="stat__label">Skuteczność</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Rodzaje Wycieków</h2>
+        <p>Specjalizujemy się w wykrywaniu wszystkich typów wycieków wody</p>
+      </div>
+      <div class="services__grid reveal-stagger">
+        <div class="card card--image">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="images/pipe_leak_pc.png">
+            <source media="(min-width: 768px)" srcset="images/pipe_leak_tablet.png">
+            <img src="images/pipe_leak_mobile.png" alt="Wycieki z rur" class="card__img">
+          </picture>
+          <div class="card__body">
+            <h3 class="card__title">Wycieki z rur</h3>
+            <p class="card__text">Lokalizacja uszkodzeń w instalacjach wodnych i kanalizacyjnych pod podłogą i w ścianach.</p>
+          </div>
+        </div>
+        <div class="card card--image">
+          <img src="images/heating.png" alt="Ogrzewanie podłogowe" class="card__img">
+          <div class="card__body">
+            <h3 class="card__title">Ogrzewanie podłogowe</h3>
+            <p class="card__text">Precyzyjne wykrywanie nieszczelności w systemach ogrzewania podłogowego.</p>
+          </div>
+        </div>
+        <div class="card card--image">
+          <img src="images/roof.png" alt="Dachy i tarasy" class="card__img">
+          <div class="card__body">
+            <h3 class="card__title">Dachy i tarasy</h3>
+            <p class="card__text">Identyfikacja miejsc przecieków wody przez dachy płaskie, tarasy i balkony.</p>
+          </div>
+        </div>
+        <div class="card card--image">
+          <img src="images/sewer.png" alt="Kanalizacja" class="card__img">
+          <div class="card__body">
+            <h3 class="card__title">Kanalizacja</h3>
+            <p class="card__text">Wykrywamy nieszczelności rur kanalizacyjnych, pionów oraz rur ukrytych w podłogach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EQUIPMENT ═══ -->
+  <section class="equipment section section--alt" id="equipment">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Profesjonalny Sprzęt</h2>
+        <p>Korzystamy z najnowocześniejszego sprzętu diagnostycznego</p>
+      </div>
+      <div class="equipment__grid reveal-stagger">
+        <div class="equipment__card">
+          <div class="equipment__card-number">1</div>
+          <div class="equipment__card-content">
+            <h3 class="equipment__card-title">Geofon wysokoczuły</h3>
+            <p class="equipment__card-text">Profesjonalny geofon elektroniczny Trubolab A-10T3 — wykrywa nawet
+              najmniejsze
+              wycieki przez beton, gips i grunt na głębokości do kilku metrów.</p>
+          </div>
+        </div>
+        <div class="equipment__card">
+          <div class="equipment__card-number">2</div>
+          <div class="equipment__card-content">
+            <h3 class="equipment__card-title">Kamera termowizyjna i wilgotnościomierz</h3>
+            <p class="equipment__card-text">Wykrywanie różnic temperatury oraz pomiar stopnia zawilgocenia, wskazujących na obecność wycieków za ścianami i w posadzkach.</p>
+          </div>
+        </div>
+        <div class="equipment__card">
+          <div class="equipment__card-number">3</div>
+          <div class="equipment__card-content">
+            <h3 class="equipment__card-title">Endoskopy inspekcyjne</h3>
+            <p class="equipment__card-text">Przemysłowe kamery do przeglądu rur, zabudów i trudno dostępnych przestrzeni. Posiadamy kilka różnych kamer do tego celu. Obraz HD.</p>
+          </div>
+        </div>
+        <div class="equipment__card">
+          <div class="equipment__card-number">4</div>
+          <div class="equipment__card-content">
+            <h3 class="equipment__card-title">Gaz znacznikowy i czujnik</h3>
+            <p class="equipment__card-text">Wprowadzamy bezpieczną mieszankę H2/N2, którą po uwolnieniu wyłapujemy specjalistycznym, czułym detektorem gazu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 style="color: var(--color-text-on-dark);">Jak Szukamy Wycieków</h2>
+        <p style="color: var(--color-text-on-dark-muted);">Sprawdzony 4-etapowy proces gwarantujący skuteczność</p>
+      </div>
+      <div class="process__timeline reveal-stagger">
+        <div class="process__step">
+          <div class="process__step-number">1</div>
+          <h3 class="process__step-title">Kontakt</h3>
+          <p class="process__step-text">Dzwonisz lub wysyłasz formularz. Wyjaśniamy detale problemu i umawiamy termin wizyty.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">2</div>
+          <h3 class="process__step-title">Diagnostyka</h3>
+          <p class="process__step-text">Przyjeżdżamy ze sprzętem i wykonujemy szczegółową diagnostykę.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">3</div>
+          <h3 class="process__step-title">Lokalizacja</h3>
+          <p class="process__step-text">Precyzyjnie wskazujemy miejsce wycieku z dokładnością od 10 do 40 cm. Wykonujemy miejscowe kucie, aby odkryć miejsce wycieku.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">4</div>
+          <h3 class="process__step-title">Naprawa</h3>
+          <p class="process__step-text">W niektórych przypadkach możemy od razu wykonać usunięcie wycieku i naprawić usterkę.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">5</div>
+          <h3 class="process__step-title">Protokół i faktura</h3>
+          <p class="process__step-text">Wystawiamy fakturę i protokół z dokumentacją zdjęciową, niezbędne do zgłoszenia szkody ubezpieczycielowi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Galeria Realizacji</h2>
+        <p>Zdjęcia z naszych prac w terenie</p>
+      </div>
+      <div class="gallery__grid reveal-stagger">
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/profesjonalna-lokalizacja-wyciekow.jpg" alt="Profesjonalna lokalizacja wycieków" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Profesjonalna lokalizacja</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/pekniety-trojnik-wyciek.jpg" alt="Pęknięty trójnik wyciek" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Pęknięty trójnik</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/wyciek-w-scianie.jpg" alt="Wyciek w ścianie" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Wyciek w ścianie</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/skuteczne-wykrywanie-geofonem.jpg" alt="Skuteczne wykrywanie geofonem" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Skuteczne wykrywanie</span>
+        </div>
+      </div>
+      <div class="gallery__cta reveal" style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="galeria.html" class="btn btn--outline btn--lg">Pokaż całą galerię</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <div class="lightbox__caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- ═══ PRICING ═══ -->
+  <section class="pricing section section--alt" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Cennik Usług</h2>
+        <p>Cena zależy od rodzaju i wielkości obiektu — bez ukrytych kosztów</p>
+      </div>
+
+      <!-- Insurance info banner -->
+      <div class="pricing__insurance reveal">
+        <div class="pricing__insurance-text">
+          <strong>Koszt usługi możesz rozliczyć w ramach swojego ubezpieczenia.</strong>
+          Wystawiamy profesjonalny protokół z dokumentacją zdjęciową i wideo – otrzymasz od nas komplet dokumentów
+          gotowy do złożenia u ubezpieczyciela w ramach Twojej polisy.
+        </div>
+      </div>
+
+      <!-- 3 pricing cards -->
+      <div class="pricing__grid reveal-stagger">
+
+        <!-- Card 1: Residential -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Mieszkania</div>
+          <div class="card__price">1 300 zł <span>brutto</span></div>
+          <p class="card__desc">Cena poszukiwania w mieszkaniach i kawalerkach.</p>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+        <!-- Card 2: House / Commercial -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Domy / komercja</div>
+          <div class="card__price">od 1 500 zł <span>brutto</span></div>
+          <p class="card__desc">Cena poszukiwania w domach, bliźniakach, biurach i innej komercji.</p>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+        <!-- Card 3: Repair -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Naprawa</div>
+          <div class="card__price">od 400 zł <span>brutto</span></div>
+          <p class="card__desc">Jeśli warunki techniczne na to pozwolą, postaramy się usunąć usterkę i dokonać naprawy od ręki.</p>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+      </div>
+
+      <!-- Travel & footer notes -->
+      <div class="pricing__notes reveal">
+        <div class="pricing__note-item">
+          <span class="pricing__note-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M 4 16 C 1 15 1 11 4 8 C 7 4 13 4 15.5 7 L 17.5 10 C 19.5 10 23 11 23 14 C 23 16 22 16 20 16" /><circle cx="7" cy="16" r="3" /><circle cx="17" cy="16" r="3" /><path d="M 10 16 H 14" /><path d="M 6 11 C 6 8 8 6 11 6 H 13 L 16 11 Z" /><path d="M 11 6 V 11" /><path d="M 10 13 H 13" /></svg></span>
+          <span>Dojazd do <strong>50 km od Warszawy</strong> — w cenie. Powyżej 50 km — dopłata <strong>+400
+              zł</strong>.</span>
+        </div>
+        <div class="pricing__note-item">
+          <span class="pricing__note-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h6"/></svg></span>
+          <span>Dokładna wycena po krótkiej konsultacji telefonicznej — zadzwoń lub zostaw zgłoszenie.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ REVIEWS ═══ -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Opinie Klientów</h2>
+        <p>Zaufało nam ponad 500 klientów w całej Polsce</p>
+      </div>
+      <div class="reviews__summary reveal">
+        <div class="reviews__rating">
+          <span class="reviews__rating-number">4.9</span>
+          <div>
+            <div class="reviews__rating-stars">★★★★★</div>
+            <div class="reviews__rating-count">na podstawie 127 opinii Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__grid reveal-stagger">
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__avatar">M</div>
+            <div>
+              <div class="review-card__name">Marek Kowalski</div>
+              <div class="review-card__date">2 tygodnie temu</div>
+            </div>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Szybka reakcja, profesjonalny sprzęt. Wyciek znaleziony w 30 minut! Polecam
+            każdemu."</p>
+          <div class="review-card__source">📍 Google Reviews</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__avatar">A</div>
+            <div>
+              <div class="review-card__name">Anna Nowak</div>
+              <div class="review-card__date">1 miesiąc temu</div>
+            </div>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Mieliśmy wyciek w ogrzewaniu podłogowym. Pan z WyciekiPro znalazł go korelatorem
+            bez kucia podłogi!"</p>
+          <div class="review-card__source">📍 Google Reviews</div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <div class="review-card__avatar">P</div>
+            <div>
+              <div class="review-card__name">Piotr Wiśniewski</div>
+              <div class="review-card__date">3 tygodnie temu</div>
+            </div>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Wspólnota zlecała im poszukiwanie wycieku w piwnicy. Bardzo profesjonalne
+            podejście i protokół badań."</p>
+          <div class="review-card__source">📍 Google Reviews</div>
+        </div>
+      </div>
+      <div class="reviews__cta reveal">
+        <p>Zadowolony z usługi? <a href="#" class="btn btn--secondary btn--sm">Zostaw opinię na Google</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Kontakt</h2>
+        <p>Zgłoś wyciek lub umów się na wizytę diagnostyczną</p>
+      </div>
+      <div class="contact__compact reveal">
+        <div class="contact-info contact-info--row">
+          <div class="contact-info__item">
+            <div class="contact-info__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg></div>
+            <div>
+              <div class="contact-info__label">Telefon (24/7)</div>
+              <div class="contact-info__value"><a href="tel:+48793499678">+48 793 499 678</a></div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></div>
+            <div>
+              <div class="contact-info__label">Email</div>
+              <div class="contact-info__value"><a href="mailto:kontakt@wyciekipro.pl">kontakt@wyciekipro.pl</a></div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div>
+              <div class="contact-info__label">Obszar działania</div>
+              <div class="contact-info__value">Warszawa i okolice (50 km)</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div>
+              <div class="contact-info__label">Godziny pracy</div>
+              <div class="contact-info__value">Pon-Pt: 7-20, Sob: 8-16</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__cta">
+          <button class="btn btn--primary btn--lg" onclick="openModal(event)">Zostaw Zgłoszenie</button>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/hydro_fixx" target="_blank" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@wyciekipro" target="_blank" class="social-link" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.07a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.5z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/48793499678" target="_blank" class="social-link" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MODAL FORM ═══ -->
+  <div class="modal-overlay" id="modal-form">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal()" aria-label="Zamknij">✕</button>
+      <h3 class="modal__title">Zostaw zgłoszenie</h3>
+      <p class="modal__subtitle">Oddzwonimy w ciągu 30 minut</p>
+      <form class="modal__form" id="modal-contact-form">
+        <div class="form-group">
+          <input type="text" id="modal-name" name="name" placeholder="Imię" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="modal-phone" name="phone" placeholder="+48 XXX XXX XXX" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="modal-city" name="city" placeholder="Miasto / miejscowość (np. Warszawa, Piaseczno)"
+            required>
+        </div>
+        <div class="form-group">
+          <label class="modal__contact-label">Wygodny sposób kontaktu:</label>
+          <div class="modal__contact-methods">
+            <label class="modal__method"><input type="radio" name="contact_method" value="whatsapp" checked>
+              WhatsApp</label>
+            <label class="modal__method"><input type="radio" name="contact_method" value="phone"> Telefon</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg modal__submit">Wyślij</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="#" class="header__logo" style="color:#fff;">
+            <span class="header__logo-icon">
+              <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M10 0C10 0 1 10.5 1 15.5C1 20.194 5.03 24 10 24C14.97 24 19 20.194 19 15.5C19 10.5 10 0 10 0Z"
+                  fill="white" />
+                <path d="M13.5 18C13.5 16.07 12.43 14.4 10.83 13.56" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="header__logo-text">Wycieki<span>Pro</span></span>
+          </a>
+          <p class="footer__brand-text">Profesjonalne wykrywanie wycieków wody z wykorzystaniem najnowocześniejszego
+            sprzętu akustycznego i termowizyjnego.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Usługi</h4>
+          <ul class="footer__links">
+            <li><a href="#services">Wycieki z rur</a></li>
+            <li><a href="#services">Ogrzewanie podłogowe</a></li>
+            <li><a href="#services">Dachy i tarasy</a></li>
+            <li><a href="#services">Baseny</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Firma</h4>
+          <ul class="footer__links">
+            <li><a href="#process">Jak działamy</a></li>
+            <li><a href="#equipment">Sprzęt</a></li>
+            <li><a href="#reviews">Opinie</a></li>
+            <li><a href="#pricing">Cennik</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Kontakt</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+48793499678">+48 793 499 678</a></li>
+            <li><a href="mailto:kontakt@wyciekipro.pl">kontakt@wyciekipro.pl</a></li>
+            <li>Warszawa, Polska</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 WyciekiPro. Wszelkie prawa zastrzeżone.</span>
+        <span>Polityka prywatności</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
