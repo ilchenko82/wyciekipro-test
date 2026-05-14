@@ -15,7 +15,6 @@
 
 .services__grid .card {
   text-align: center;
-  padding: var(--space-2xl) var(--space-lg);
 }
 
 .services__grid .card__icon {
@@ -35,5 +34,9 @@
 @media (max-width: 576px) {
   .services__grid {
     grid-template-columns: 1fr;
+  }
+  .services__grid .card {
+    max-width: 85%;
+    margin: 0 auto;
   }
 }
