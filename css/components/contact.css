@@ -172,17 +172,25 @@
   margin-bottom: var(--space-md);
 }
 
-.modal__form input {
+.modal__form input,
+.modal__form textarea {
   width: 100%;
   padding: 0.65rem 0.9rem;
   background: var(--color-bg);
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
   font-size: var(--text-base);
+  font-family: inherit;
   transition: all var(--transition-fast);
 }
 
-.modal__form input:focus {
+.modal__form textarea {
+  resize: vertical;
+  min-height: 4.5rem;
+}
+
+.modal__form input:focus,
+.modal__form textarea:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px var(--color-accent-glow);

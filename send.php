@@ -16,6 +16,7 @@ $name = isset($_POST['name']) ? trim($_POST['name']) : '';
 $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 $city = isset($_POST['city']) ? trim($_POST['city']) : '';
 $contact_method = isset($_POST['contact_method']) ? trim($_POST['contact_method']) : '';
+$problem_desc = isset($_POST['message']) ? trim($_POST['message']) : '';
 
 // Validation
 if(empty($phone)) {
@@ -28,6 +29,7 @@ $message_text = "💧 Nowe zgłoszenie ze strony WyciekiPro:\n\n";
 $message_text .= "👤 Imię: " . ($name ? $name : "Nie podano") . "\n";
 $message_text .= "📞 Telefon: " . $phone . "\n";
 $message_text .= "📍 Miasto: " . ($city ? $city : "Nie podano") . "\n";
+$message_text .= "📝 Opis: " . ($problem_desc ? $problem_desc : "Nie podano") . "\n";
 $message_text .= "💬 Preferowany kontakt: " . ($contact_method === 'whatsapp' ? 'WhatsApp' : 'Telefon') . "\n";
 $message_text .= "🕒 Data: " . date("Y-m-d H:i:s") . "\n";
 
