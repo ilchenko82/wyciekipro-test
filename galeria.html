@@ -54,7 +54,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: hsla(25, 95%, 53%, 0.85);
+      background: hsla(25, 95%, 53%, 0.7);
       backdrop-filter: blur(10px);
       color: #fff;
       padding: 10px 24px 10px 20px;
@@ -62,7 +62,7 @@
       font-size: var(--text-sm);
       font-weight: var(--fw-bold);
       border: none;
-      box-shadow: 0 4px 20px hsla(25, 95%, 53%, 0.35);
+      box-shadow: 0 4px 20px hsla(25, 95%, 53%, 0.3);
       text-decoration: none;
       transition: all var(--transition-fast);
     }
@@ -262,7 +262,9 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" onclick="prevGalleryImage(event)" aria-label="Poprzednie">❮</button>
     <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <button class="lightbox__nav lightbox__nav--next" onclick="nextGalleryImage(event)" aria-label="Następne">❯</button>
     <div class="lightbox__caption" id="lightbox-caption"></div>
   </div>
 

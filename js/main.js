@@ -38,10 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
         document.body.style.paddingRight = scrollbarW + 'px';
         header.style.paddingRight = scrollbarW + 'px';
+        const backLink = document.querySelector('.back-link-fixed');
+        if (backLink) backLink.style.display = 'none';
       } else {
         document.body.style.overflow = '';
         document.body.style.paddingRight = '';
         header.style.paddingRight = '';
+        const backLink = document.querySelector('.back-link-fixed');
+        if (backLink) backLink.style.display = '';
       }
     });
 
@@ -53,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         document.body.style.paddingRight = '';
         header.style.paddingRight = '';
+        const backLink = document.querySelector('.back-link-fixed');
+        if (backLink) backLink.style.display = '';
       });
     });
   }
@@ -183,7 +189,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Lightbox ───────────────────────────────────────────────────────────────
+let currentGalleryIndex = -1;
+let galleryItems = [];
+
+function initGalleryItems() {
+  galleryItems = Array.from(document.querySelectorAll('.gallery__item'));
+}
+
 function openLightbox(item) {
+  if (galleryItems.length === 0) initGalleryItems();
+  currentGalleryIndex = galleryItems.indexOf(item);
+  
   const img = item.querySelector('img');
   const label = item.querySelector('.gallery__item-label');
   const lightbox = document.getElementById('lightbox');
@@ -199,10 +215,84 @@ function openLightbox(item) {
   }
 }
 
+function updateLightbox() {
+  if (currentGalleryIndex < 0 || currentGalleryIndex >= galleryItems.length) return;
+  const item = galleryItems[currentGalleryIndex];
+  const img = item.querySelector('img');
+  const label = item.querySelector('.gallery__item-label');
+  
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  
+  if (lbImg && img) {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+  }
+  if (lbCaption) {
+    lbCaption.textContent = label ? label.textContent : '';
+  }
+}
+
+window.nextGalleryImage = function(e) {
+  if (e) e.stopPropagation();
+  if (galleryItems.length === 0) return;
+  if (currentGalleryIndex < galleryItems.length - 1) {
+    currentGalleryIndex++;
+  } else {
+    currentGalleryIndex = 0;
+  }
+  updateLightbox();
+};
+
+window.prevGalleryImage = function(e) {
+  if (e) e.stopPropagation();
+  if (galleryItems.length === 0) return;
+  if (currentGalleryIndex > 0) {
+    currentGalleryIndex--;
+  } else {
+    currentGalleryIndex = galleryItems.length - 1;
+  }
+  updateLightbox();
+};
+
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
+}
+
+// Swipe handling for lightbox
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.classList.contains('open')) {
+    touchStartX = e.changedTouches[0].screenX;
+  }
+}, { passive: true });
+
+document.addEventListener('touchend', e => {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.classList.contains('open')) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }
+}, { passive: true });
+
+let isSwipe = false;
+
+function handleSwipe() {
+  const threshold = 50;
+  if (touchEndX < touchStartX - threshold) {
+    isSwipe = true;
+    window.nextGalleryImage();
+    setTimeout(() => isSwipe = false, 100);
+  } else if (touchEndX > touchStartX + threshold) {
+    isSwipe = true;
+    window.prevGalleryImage();
+    setTimeout(() => isSwipe = false, 100);
+  }
 }
 
 // ── Modal Form ────────────────────────────────────────────────────────────
@@ -238,8 +328,16 @@ function closeModal() {
 // Close modal on overlay click
 document.addEventListener('click', (e) => {
   const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
   const modal = document.getElementById('modal-form');
-  if (lightbox && e.target === lightbox) closeLightbox();
+  
+  if (lightbox && lightbox.classList.contains('open')) {
+    // If user clicked the image or the backdrop, and it wasn't a swipe, close it.
+    if ((e.target === lightbox || e.target === lbImg) && !isSwipe) {
+      closeLightbox();
+    }
+  }
+  
   if (modal && e.target === modal) closeModal();
 });
 
