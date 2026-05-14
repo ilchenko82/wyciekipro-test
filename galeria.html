@@ -45,37 +45,61 @@
     .gallery-page .section-header h1 {
       font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
     }
-    .back-link-fixed {
+    .gallery-cta-fixed {
       position: fixed;
       bottom: var(--space-xl);
       left: 50%;
       transform: translateX(-50%);
       z-index: 100;
+      display: flex;
+      gap: 12px;
+      width: max-content;
+    }
+    .fixed-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: hsla(25, 95%, 53%, 0.7);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       color: #fff;
-      padding: 10px 24px 10px 20px;
+      padding: 10px 20px;
       border-radius: var(--radius-full);
       font-size: var(--text-sm);
       font-weight: var(--fw-bold);
       border: none;
-      box-shadow: 0 4px 20px hsla(25, 95%, 53%, 0.3);
       text-decoration: none;
-      transition: all var(--transition-fast);
+      transition: all var(--transition-base);
+      white-space: nowrap;
+      box-shadow: var(--shadow-lg);
     }
-    .back-link-fixed:hover {
-      background: hsla(25, 95%, 53%, 1);
+    .fixed-btn--phone {
+      background: hsla(25, 95%, 53%, 0.7);
+      border: 1px solid hsla(25, 95%, 53%, 0.3);
+    }
+    .fixed-btn--form {
+      background: hsla(195, 85%, 48%, 0.7);
+      border: 1px solid hsla(195, 85%, 48%, 0.3);
+    }
+    .fixed-btn:hover {
+      transform: translateY(-3px);
       color: #fff;
-      box-shadow: 0 6px 25px hsla(25, 95%, 53%, 0.45);
-      transform: translateX(-50%) translateY(-2px);
+      box-shadow: var(--shadow-xl);
     }
+    .fixed-btn--phone:hover { background: hsla(25, 95%, 53%, 1); }
+    .fixed-btn--form:hover { background: hsla(195, 85%, 48%, 1); }
+
     @media (max-width: 768px) {
-      .back-link-fixed {
+      .gallery-cta-fixed {
         bottom: var(--space-lg);
-        padding: 8px 20px 8px 16px;
+        gap: 8px;
+        width: calc(100% - 32px);
+        justify-content: center;
+      }
+      .fixed-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        flex: 1;
+        justify-content: center;
       }
     }
   </style>
@@ -146,10 +170,15 @@
   <!-- ═══ GALLERY ═══ -->
   <section class="gallery section gallery-page">
     <div class="container">
-      <a href="index.html" class="back-link-fixed">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Powrót
-      </a>
+      <div class="gallery-cta-fixed">
+        <a href="tel:+48793499678" class="fixed-btn fixed-btn--phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Zadzwoń
+        </a>
+        <a href="#contact" class="fixed-btn fixed-btn--form" onclick="openModal(event)">
+          Zostaw zgłoszenie
+        </a>
+      </div>
       <div class="section-header">
         <h1>Nasze Realizacje</h1>
         <p>Zdjęcia z naszych prac w terenie: lokalizacja wycieków wody</p>

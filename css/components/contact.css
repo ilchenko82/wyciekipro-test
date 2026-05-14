@@ -196,7 +196,8 @@
   box-shadow: 0 0 0 3px var(--color-accent-glow);
 }
 
-.modal__form input::placeholder {
+.modal__form input::placeholder,
+.modal__form textarea::placeholder {
   color: hsl(210, 10%, 75%);
   opacity: 1;
 }

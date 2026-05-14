@@ -341,10 +341,19 @@ document.addEventListener('click', (e) => {
   if (modal && e.target === modal) closeModal();
 });
 
-// Close on Escape
+// Keyboard accessibility
 document.addEventListener('keydown', (e) => {
+  const lightbox = document.getElementById('lightbox');
+  const isLightboxOpen = lightbox && lightbox.classList.contains('open');
+
   if (e.key === 'Escape') {
     closeLightbox();
     closeModal();
+  } else if (isLightboxOpen) {
+    if (e.key === 'ArrowRight' || e.key === 'Right') {
+      window.nextGalleryImage();
+    } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+      window.prevGalleryImage();
+    }
   }
 });
