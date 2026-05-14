@@ -149,7 +149,7 @@
 .hero__subtitle {
   font-size: var(--text-lg);
   color: #fff; /* Solid white for maximum contrast */
-  font-weight: 450; /* Custom weight between Regular and Medium */
+  font-weight: 400; /* Reverted to Regular */
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-2xl);
   max-width: 550px;
