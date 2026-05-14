@@ -10,7 +10,20 @@
   right: 0;
   z-index: var(--z-header);
   padding: var(--space-md) 0;
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--space-md));
   transition: all var(--transition-base);
+}
+
+/* Cover the iOS safe-area above the header so page content doesn't bleed through */
+.header::before {
+  content: '';
+  position: absolute;
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
 }
 
 /* Scrolled state — solid background */
@@ -19,6 +32,7 @@
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow-md);
   padding: var(--space-md) 0;
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--space-md));
 }
 
 .header__inner {

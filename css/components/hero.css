@@ -357,7 +357,7 @@
 /* Small mobile (≤480px) */
 @media (max-width: 480px) {
   .hero {
-    min-height: 65vh;
+    min-height: auto;
     padding-top: 80px;
     padding-bottom: 20px;
   }
@@ -371,6 +371,15 @@
   }
 
   .hero__stats {
-    display: none; /* Hide stats on small mobile to show more of the image */
+    gap: var(--space-xs);
+    padding-top: var(--space-sm);
+  }
+
+  .hero__stats .stat__number {
+    font-size: var(--text-lg);
+  }
+
+  .hero__stats .stat__label {
+    font-size: 0.65rem;
   }
 }
