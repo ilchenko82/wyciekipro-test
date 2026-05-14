@@ -18,21 +18,30 @@
 .header::before {
   content: '';
   position: absolute;
-  top: calc(-1 * env(safe-area-inset-top, 0px));
+  top: -100px; /* Extend far above the viewport to cover safe area and potential bounces */
   left: 0;
   right: 0;
   bottom: 0;
-  background: inherit;
+  background: transparent;
   z-index: -1;
+  transition: all var(--transition-base);
+  pointer-events: none;
 }
 
 /* Scrolled state — solid background */
 .header.scrolled {
   background: hsla(0, 0%, 100%, 0.95);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--shadow-md);
   padding: var(--space-md) 0;
   padding-top: calc(env(safe-area-inset-top, 0px) + var(--space-md));
+}
+
+.header.scrolled::before {
+  background: hsla(0, 0%, 100%, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .header__inner {
