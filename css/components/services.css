@@ -35,8 +35,4 @@
   .services__grid {
     grid-template-columns: 1fr;
   }
-  .services__grid .card {
-    max-width: 85%;
-    margin: 0 auto;
-  }
 }
