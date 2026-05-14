@@ -61,45 +61,54 @@
       gap: 8px;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: var(--radius-full);
+      padding: 10px 22px;
+      border-radius: var(--radius-md);
       font-size: var(--text-sm);
       font-weight: var(--fw-bold);
-      border: none;
       text-decoration: none;
       transition: all var(--transition-base);
       white-space: nowrap;
       box-shadow: var(--shadow-lg);
+      border: 2px solid transparent;
     }
     .fixed-btn--phone {
-      background: hsla(25, 95%, 53%, 0.7);
-      border: 1px solid hsla(25, 95%, 53%, 0.3);
+      background: var(--color-cta);
+      border-color: var(--color-cta);
+      color: #fff;
     }
     .fixed-btn--form {
-      background: hsla(195, 85%, 48%, 0.7);
-      border: 1px solid hsla(195, 85%, 48%, 0.3);
+      background: hsla(195, 85%, 48%, 0.75);
+      border-color: hsla(0, 0%, 100%, 0.5);
+      color: #fff;
     }
     .fixed-btn:hover {
       transform: translateY(-3px);
-      color: #fff;
       box-shadow: var(--shadow-xl);
     }
-    .fixed-btn--phone:hover { background: hsla(25, 95%, 53%, 1); }
-    .fixed-btn--form:hover { background: hsla(195, 85%, 48%, 1); }
+    .fixed-btn--phone:hover { 
+      background: var(--color-cta-hover);
+      border-color: var(--color-cta-hover);
+      color: #fff;
+    }
+    .fixed-btn--form:hover { 
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+    }
 
     @media (max-width: 768px) {
       .gallery-cta-fixed {
         bottom: var(--space-lg);
-        gap: 8px;
-        width: calc(100% - 32px);
+        gap: 10px;
+        width: calc(100% - 40px);
         justify-content: center;
       }
       .fixed-btn {
-        padding: 8px 16px;
-        font-size: 0.75rem;
+        padding: 10px 14px;
+        font-size: 0.8rem;
         flex: 1;
         justify-content: center;
+        border-width: 1.5px;
       }
     }
   </style>
@@ -176,7 +185,7 @@
           Zadzwoń
         </a>
         <a href="#contact" class="fixed-btn fixed-btn--form" onclick="openModal(event)">
-          Zostaw zgłoszenie
+          Wyślij Zgłoszenie
         </a>
       </div>
       <div class="section-header">
