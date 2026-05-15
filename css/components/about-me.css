@@ -133,7 +133,7 @@
 /* --- Image column --- */
 .about-v2__image-col {
   width: 100%;
-  height: 280px;          /* compact on mobile, crops from the bottom */
+  height: 380px;          /* Більше на мобільному, щоб бачити обладнання/ноги */
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -141,10 +141,17 @@
 @media (min-width: 768px) {
   .about-v2__image-col {
     position: relative;   /* restore absolute strategy for tablet/desktop */
-    width: 42%;
+    width: 40%;           /* Трохи вужче на таблеті */
     height: auto;
-    min-height: 420px;
+    min-height: 340px;    /* Пропорційно менша висота для таблета */
     align-self: stretch;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-v2__image-col {
+    width: 42%;
+    min-height: 420px;    /* Оригінальна висота для ПК */
   }
 }
 
@@ -165,7 +172,7 @@
 }
 
 .about-v2__content-col {
-  padding: var(--space-xl);
+  padding: var(--space-lg) var(--space-md); /* Компактніше на мобільному */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,14 +180,15 @@
 
 @media (min-width: 768px) {
   .about-v2__content-col {
-    width: 58%;
-    padding: var(--space-xl);
+    width: 60%;
+    padding: var(--space-xl) var(--space-lg); /* Менші відступи на таблеті */
   }
 }
 
 @media (min-width: 992px) {
   .about-v2__content-col {
-    padding: var(--space-2xl);
+    width: 58%;
+    padding: var(--space-2xl); /* Оригінальні відступи на ПК */
   }
 }
 
@@ -191,7 +199,7 @@
 }
 
 .about-v2__quote {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem); /* Змінено clamp для кращого масштабування на таблеті */
   font-weight: var(--fw-semibold);
   line-height: 1.3;
   color: var(--color-primary);
@@ -208,6 +216,13 @@
 .about-v2__details p {
   color: var(--color-text-muted);
   line-height: 1.6;
+  font-size: 0.95rem; /* Трохи менший текст для мобільних/таблетів */
+}
+
+@media (min-width: 992px) {
+  .about-v2__details p {
+    font-size: 1rem; /* Стандартний на ПК */
+  }
 }
 
 .about-v2__footer {
