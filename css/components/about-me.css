@@ -109,7 +109,7 @@
    A wide, premium, SaaS-like card layout.
 */
 .about-v2 {
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   padding: var(--space-section) 0;
 }
 

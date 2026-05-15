@@ -147,13 +147,10 @@
   <section class="hero" id="hero">
     <div class="hero__bg-image">
       <picture>
-        <!-- Mobile (до 576px) -->
         <source media="(max-width: 576px)"
           srcset="images/hero/hero_mobile@1x.jpg 1x, images/hero/hero_mobile@2x.jpg 2x">
-        <!-- Tablet (до 1024px) -->
         <source media="(max-width: 1024px)"
           srcset="images/hero/hero_tablet@1x.jpg 1x, images/hero/hero_tablet@2x.jpg 2x">
-        <!-- Desktop (fallback) -->
         <img src="images/hero/hero_pc@1x.jpg" srcset="images/hero/hero_pc@1x.jpg 1x, images/hero/hero_pc@2x.jpg 2x"
           alt="Profesjonalne wykrywanie wycieków wody — WyciekiPro" loading="eager" fetchpriority="high">
       </picture>
@@ -170,7 +167,7 @@
     </div>
     <div class="container">
       <div class="hero__content">
-        <div class="hero__badge"><span class="pulse-dot"></span> Dostępni 24/7 · WhatsApp</div>
+        <div class="hero__badge" style="align-self: flex-start;"><span class="pulse-dot"></span> Dostępni 7-23 · WhatsApp</div>
         <h1 class="hero__title">Szybka i precyzyjna <span class="highlight">lokalizacja wycieków</span></h1>
         <p class="hero__subtitle">Nowoczesny sprzęt diagnostyczny, szybki dojazd i dokładne wskazanie miejsca wycieku bez zbędnego kucia.</p>
         <div class="hero__cta">
@@ -186,16 +183,16 @@
 
         <div class="hero__stats">
           <div class="stat">
-            <div class="stat__number"><span class="counter-animated" data-target="500">0</span><span
+            <div class="stat__number"><span class="counter-animated" data-target="300">300</span><span
                 class="accent">+</span></div>
             <div class="stat__label">Wykrytych wycieków</div>
           </div>
           <div class="stat">
-            <div class="stat__number"><span class="counter-animated" data-target="12">0</span></div>
+            <div class="stat__number"><span class="counter-animated" data-target="10">10</span></div>
             <div class="stat__label">Lat doświadczenia</div>
           </div>
           <div class="stat">
-            <div class="stat__number"><span class="counter-animated" data-target="98">0</span><span
+            <div class="stat__number"><span class="counter-animated" data-target="95">95</span><span
                 class="accent">%</span></div>
             <div class="stat__label">Skuteczność</div>
           </div>
@@ -204,8 +201,56 @@
     </div>
   </section>
 
-  <!-- ═══ 2. FEATURES (Why Us) ═══ -->
-  <section class="equipment section section--alt" id="why-us">
+  <!-- ═══ 2. PRICING ═══ -->
+  <section class="pricing section section--alt" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Cennik Usług</h2>
+        <p>Cena zależy od rodzaju i wielkości obiektu — bez ukrytych kosztów</p>
+      </div>
+
+      <!-- 3 pricing cards -->
+      <div class="pricing__grid reveal-stagger">
+
+        <!-- Card 1: Residential -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Mieszkania</div>
+          <p class="card__desc">Cena poszukiwania w mieszkaniach i kawalerkach.</p>
+          <div class="card__price">1 300 zł <span>brutto</span></div>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+        <!-- Card 2: House / Commercial -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Domy / komercja</div>
+          <p class="card__desc">Cena poszukiwania w domach, bliźniakach, biurach i innej komercji.</p>
+          <div class="card__price">od 1 500 zł <span>brutto</span></div>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+        <!-- Card 3: Repair -->
+        <div class="card card--pricing">
+          <div class="pricing__tag">Naprawa</div>
+          <p class="card__desc">Jeśli warunki techniczne na to pozwolą, postaramy się usunąć usterkę i dokonać naprawy od ręki.</p>
+          <div class="card__price">od 400 zł <span>brutto</span></div>
+          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
+        </div>
+
+      </div>
+
+      <!-- Travel & footer notes -->
+      <div class="pricing__notes reveal">
+        <div class="pricing__note-item">
+          <span class="pricing__note-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h6"/></svg></span>
+          <span>Dokładna wycena po krótkiej konsultacji telefonicznej — zadzwoń lub zostaw zgłoszenie.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ 3. Dlaczego my? ═══ -->
+  <section class="features section" id="why-us">
     <div class="container">
       <div class="section-header reveal">
         <h2>Dlaczego klienci wybierają nas</h2>
@@ -214,7 +259,6 @@
         <!-- Feature 1 -->
         <div class="equipment__card">
           <div class="equipment__card-number">
-            <!-- Обраний варіант: Заповнений силует з дзеркалами -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.5,9.5l-1.5-4C16.8,4.6,15.9,4,15,4H9C8.1,4,7.2,4.6,7,5.5l-1.5,4C4.6,9.8,4,10.6,4,11.5V18c0,0.6,0.4,1,1,1h1c0.6,0,1-0.4,1-1v-1h10v1c0,0.6,0.4,1,1,1h1c0.6,0,1-0.4,1-1v-6.5C20,10.6,19.4,9.8,18.5,9.5z
                        M7.2,9.2l1.1-3C8.4,5.7,8.7,5.5,9,5.5h6c0.3,0,0.6,0.2,0.8,0.7l1.1,3H7.2z
@@ -261,167 +305,19 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══ 3. GALLERY ═══ -->
-  <section class="gallery section" id="gallery">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Galeria Realizacji</h2>
-        <p>Zdjęcia z naszych prac w terenie</p>
-      </div>
-      <div class="gallery__grid reveal-stagger">
-        <div class="gallery__item" onclick="openLightbox(this)">
-          <img src="images/gallery/profesjonalna-lokalizacja-wyciekow.jpg" alt="Profesjonalna lokalizacja wycieków" loading="lazy" onload="this.classList.add('loaded')">
-          <span class="gallery__item-label">Profesjonalna lokalizacja</span>
-        </div>
-        <div class="gallery__item" onclick="openLightbox(this)">
-          <img src="images/gallery/pekniety-trojnik-wyciek.jpg" alt="Pęknięty trójnik wyciek" loading="lazy" onload="this.classList.add('loaded')">
-          <span class="gallery__item-label">Pęknięty trójnik</span>
-        </div>
-        <div class="gallery__item" onclick="openLightbox(this)">
-          <img src="images/gallery/wyciek-w-scianie.jpg" alt="Wyciek w ścianie" loading="lazy" onload="this.classList.add('loaded')">
-          <span class="gallery__item-label">Wyciek w ścianie</span>
-        </div>
-        <div class="gallery__item" onclick="openLightbox(this)">
-          <img src="images/gallery/skuteczne-wykrywanie-geofonem.jpg" alt="Skuteczne wykrywanie geofonem" loading="lazy" onload="this.classList.add('loaded')">
-          <span class="gallery__item-label">Skuteczne wykrywanie</span>
-        </div>
-      </div>
-      <div class="gallery__cta reveal" style="text-align: center; margin-top: var(--space-2xl);">
-        <a href="galeria.html" class="btn btn--outline btn--lg">Pokaż całą galerię</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox__close" onclick="closeLightbox()">✕</button>
-    <button class="lightbox__nav lightbox__nav--prev" onclick="prevGalleryImage(event)" aria-label="Poprzednie">❮</button>
-    <img class="lightbox__img" id="lightbox-img" src="" alt="">
-    <button class="lightbox__nav lightbox__nav--next" onclick="nextGalleryImage(event)" aria-label="Następne">❯</button>
-    <div class="lightbox__caption" id="lightbox-caption"></div>
-  </div>
-
-  <!-- ═══ 4. PROCESS ═══ -->
-  <section class="process section section--alt" id="process">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 style="color: var(--color-text-on-dark);">Jak Szukamy Wycieków</h2>
-        <p style="color: var(--color-text-on-dark-muted);">Sprawdzony 4-etapowy proces gwarantujący skuteczność</p>
-      </div>
-      <div class="process__timeline reveal-stagger">
-        <div class="process__step">
-          <div class="process__step-number">1</div>
-          <h3 class="process__step-title">Kontakt</h3>
-          <p class="process__step-text">Dzwonisz lub wysyłasz formularz. Wyjaśniamy detale problemu i umawiamy termin wizyty.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">2</div>
-          <h3 class="process__step-title">Diagnostyka</h3>
-          <p class="process__step-text">Przyjeżdżamy ze sprzętem i wykonujemy szczegółową diagnostykę.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">3</div>
-          <h3 class="process__step-title">Lokalizacja</h3>
-          <p class="process__step-text">Precyzyjnie wskazujemy miejsce wycieku z dokładnością od 10 do 40 cm. Wykonujemy miejscowe kucie, aby odkryć miejsce wycieku.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">4</div>
-          <h3 class="process__step-title">Naprawa</h3>
-          <p class="process__step-text">W niektórych przypadkach możemy od razu wykonać usunięcie wycieku i naprawić usterkę.</p>
-        </div>
-        <div class="process__step">
-          <div class="process__step-number">5</div>
-          <h3 class="process__step-title">Protokół i faktura</h3>
-          <p class="process__step-text">Wystawiamy fakturę i protokół z dokumentacją zdjęciową, niezbędne do zgłoszenia szkody ubezpieczycielowi.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 5. PRICING ═══ -->
-  <section class="pricing section" id="pricing">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Cennik Usług</h2>
-        <p>Cena zależy od rodzaju i wielkości obiektu — bez ukrytych kosztów</p>
-      </div>
-
-      <!-- Insurance info banner -->
-      <div class="pricing__insurance reveal">
+      <!-- Insurance info banner moved here -->
+      <div class="pricing__insurance reveal" style="margin-top: var(--space-xl);">
         <div class="pricing__insurance-text">
-          <strong>Koszt usługi możesz rozliczyć w ramach swojego ubezpieczenia.</strong>
+          <strong>Koszt usługi możesz rozliczyć w ramach swojego ubezpieczenia (m.in. PZU, Warta).</strong>
           Wystawiamy profesjonalny protokół z dokumentacją zdjęciową i wideo – otrzymasz od nas komplet dokumentów
           gotowy do złożenia u ubezpieczyciela w ramach Twojej polisy.
         </div>
       </div>
-
-      <!-- 3 pricing cards -->
-      <div class="pricing__grid reveal-stagger">
-
-        <!-- Card 1: Residential -->
-        <div class="card card--pricing">
-          <div class="pricing__tag">Mieszkania</div>
-          <div class="card__price">1 300 zł <span>brutto</span></div>
-          <p class="card__desc">Cena poszukiwania w mieszkaniach i kawalerkach.</p>
-          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
-        </div>
-
-        <!-- Card 2: House / Commercial -->
-        <div class="card card--pricing">
-          <div class="pricing__tag">Domy / komercja</div>
-          <div class="card__price">od 1 500 zł <span>brutto</span></div>
-          <p class="card__desc">Cena poszukiwania w domach, bliźniakach, biurach i innej komercji.</p>
-          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
-        </div>
-
-        <!-- Card 3: Repair -->
-        <div class="card card--pricing">
-          <div class="pricing__tag">Naprawa</div>
-          <div class="card__price">od 400 zł <span>brutto</span></div>
-          <p class="card__desc">Jeśli warunki techniczne na to pozwolą, postaramy się usunąć usterkę i dokonać naprawy od ręki.</p>
-          <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
-        </div>
-
-      </div>
-
-      <!-- Travel & footer notes -->
-      <div class="pricing__notes reveal">
-
-        <div class="pricing__note-item">
-          <span class="pricing__note-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h6"/></svg></span>
-          <span>Dokładna wycena po krótkiej konsultacji telefonicznej — zadzwoń lub zostaw zgłoszenie.</span>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ═══ ABOUT SPECIALIST ═══ -->
-  <section class="about-v2" id="about">
-    <div class="container">
-      <div class="about-v2__card reveal">
-        <div class="about-v2__image-col">
-          <img src="images/fachowiec-z-lokalizacj-wyciekow.jpg" alt="Sławek — specjalista lokalizacji wycieków" class="about-v2__image" loading="lazy">
-        </div>
-        <div class="about-v2__content-col">
-          <h2 class="about-v2__quote">Dokładna diagnoza. Konkretne rozwiązanie.</h2>
-          <div class="about-v2__details">
-            <p>Od ponad 10 lat zajmuję się lokalizacją wycieków oraz diagnostyką instalacji wodnych i grzewczych. Stawiam na precyzyjną diagnostykę i konkretne wskazanie miejsca problemu — bez działania na ślepo i niepotrzebnej demolki.</p>
-          </div>
-          <div class="about-v2__footer">
-            <div>
-              <div class="about-v2__role">Twój specjalista — Sławek</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ 6. SERVICES ═══ -->
+  <!-- ═══ 4. SERVICES ═══ -->
   <section class="services section section--alt" id="services">
     <div class="container">
       <div class="section-header reveal">
@@ -465,7 +361,7 @@
     </div>
   </section>
 
-  <!-- ═══ 7. EQUIPMENT ═══ -->
+  <!-- ═══ 5. EQUIPMENT ═══ -->
   <section class="equipment section" id="equipment">
     <div class="container">
       <div class="section-header reveal">
@@ -507,8 +403,107 @@
     </div>
   </section>
 
-  <!-- ═══ 8. REVIEWS ═══ -->
-  <section class="reviews section section--alt" id="reviews">
+  <!-- ═══ 6. PROCESS ═══ -->
+  <section class="process section section--alt" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 style="color: var(--color-text-on-dark);">Jak Szukamy Wycieków</h2>
+        <p style="color: var(--color-text-on-dark-muted);">Sprawdzony 4-etapowy proces gwarantujący skuteczność</p>
+      </div>
+      <div class="process__timeline reveal-stagger">
+        <div class="process__step">
+          <div class="process__step-number">1</div>
+          <h3 class="process__step-title">Kontakt</h3>
+          <p class="process__step-text">Dzwonisz lub wysyłasz formularz. Wyjaśniamy detale problemu i umawiamy termin wizyty.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">2</div>
+          <h3 class="process__step-title">Diagnostyka</h3>
+          <p class="process__step-text">Przyjeżdżamy ze sprzętem i wykonujemy szczegółową diagnostykę.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">3</div>
+          <h3 class="process__step-title">Lokalizacja</h3>
+          <p class="process__step-text">Precyzyjnie wskazujemy miejsce wycieku z dokładnością od 10 do 40 cm. Wykonujemy miejscowe kucie, aby odkryć miejsce wycieku.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">4</div>
+          <h3 class="process__step-title">Naprawa</h3>
+          <p class="process__step-text">W niektórych przypadkach możemy od razu wykonać usunięcie wycieku i naprawić usterkę.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-number">5</div>
+          <h3 class="process__step-title">Protokół i faktura</h3>
+          <p class="process__step-text">Wystawiamy fakturę i protokół з dokumentacją zdjęciową, niezbędne do zgłoszenia szkody ubezpieczycielowi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 7. ABOUT SPECIALIST ═══ -->
+  <section class="about-v2" id="about">
+    <div class="container">
+      <div class="about-v2__card reveal">
+        <div class="about-v2__image-col">
+          <img src="images/fachowiec-z-lokalizacj-wyciekow.jpg" alt="Sławek — specjalista lokalizacji wycieków" class="about-v2__image" loading="lazy">
+        </div>
+        <div class="about-v2__content-col">
+          <h2 class="about-v2__quote">Dokładna diagnoza. Konkretne rozwiązanie.</h2>
+          <div class="about-v2__details">
+            <p>Od ponad 10 lat zajmuję się lokalizacją wycieków oraz diagnostyką instalacji wodnych i grzewczych. Stawiam na precyzyjną diagnostykę i konkretne wskazanie miejsca problemu — bez działania na ślepo i niepotrzebnej demolki.</p>
+          </div>
+          <div class="about-v2__footer">
+            <div>
+              <div class="about-v2__role">Twój specjalista — Sławek</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 8. GALLERY ═══ -->
+  <section class="gallery section section--alt" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Galeria Realizacji</h2>
+        <p>Zdjęcia z naszych prac w terenie</p>
+      </div>
+      <div class="gallery__grid reveal-stagger">
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/profesjonalna-lokalizacja-wyciekow.jpg" alt="Profesjonalna lokalizacja wycieków" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Profesjonalna lokalizacja</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/pekniety-trojnik-wyciek.jpg" alt="Pęknięty trójnik wyciek" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Pęknięty trójnik</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/wyciek-w-scianie.jpg" alt="Wyciek w ścianie" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Wyciek w ścianie</span>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <img src="images/gallery/skuteczne-wykrywanie-geofonem.jpg" alt="Skuteczne wykrywanie geofonem" loading="lazy" onload="this.classList.add('loaded')">
+          <span class="gallery__item-label">Skuteczne wykrywanie</span>
+        </div>
+      </div>
+      <div class="gallery__cta reveal" style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="galeria.html" class="btn btn--outline btn--lg">Pokaż całą galerię</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" onclick="prevGalleryImage(event)" aria-label="Poprzednie">❮</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <button class="lightbox__nav lightbox__nav--next" onclick="nextGalleryImage(event)" aria-label="Następne">❯</button>
+    <div class="lightbox__caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- ═══ 9. REVIEWS ═══ -->
+  <section class="reviews section" id="reviews">
     <div class="container">
       <div class="section-header reveal">
         <h2>Opinie Klientów</h2>
@@ -570,8 +565,8 @@
     </div>
   </section>
 
-  <!-- ═══ 9. CONTACT ═══ -->
-  <section class="contact section" id="contact">
+  <!-- ═══ 10. CONTACT ═══ -->
+  <section class="contact section section--alt" id="contact">
     <div class="container">
       <div class="section-header reveal">
         <h2>Kontakt</h2>
@@ -586,7 +581,7 @@
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.21.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg></div>
             <div>
-              <div class="contact-info__label">Telefon (24/7)</div>
+              <div class="contact-info__label">Telefon (7-23)</div>
               <div class="contact-info__value"><a href="tel:+48793499678">+48 793 499 678</a></div>
             </div>
           </div>

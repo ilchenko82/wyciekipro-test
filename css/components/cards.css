@@ -141,10 +141,10 @@
 }
 
 .card__price {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
   font-weight: var(--fw-extrabold);
   color: var(--color-primary);
-  margin: var(--space-lg) 0;
+  margin: var(--space-sm) 0 var(--space-md);
 }
 
 .card__price span {
@@ -180,7 +180,7 @@
   font-size: var(--text-base);
   color: var(--color-text-light);
   line-height: var(--lh-relaxed);
-  margin: var(--space-md) 0 var(--space-xl);
+  margin: var(--space-xs) 0 var(--space-md);
 }
 
 @media (max-width: 768px) {

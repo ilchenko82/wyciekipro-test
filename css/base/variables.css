@@ -86,7 +86,7 @@
   --space-2xl: 2.7rem;    /* 43px */
   --space-3xl: 3.6rem;    /* 58px */
   --space-4xl: 5.4rem;    /* 86px */
-  --space-section: clamp(1.75rem, 1.35rem + 2.25vw, 3.15rem);
+  --space-section: clamp(1.4rem, 1.1rem + 1.8vw, 2.5rem);
   
   /* ── Layout ────────────────────────────────────────────────────────── */
   --container-max: 1200px;
