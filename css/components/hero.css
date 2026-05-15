@@ -7,11 +7,20 @@
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;      /* вертикальний розподіл */
   align-items: center;
   background: var(--color-bg-hero);
   overflow: hidden;
   padding-top: 80px;
-  padding-bottom: 40px;
+  padding-bottom: 0; /* Прибрали відступ знизу, щоб притиснути статистику */
+}
+
+/* Контейнер розтягується на всю висоту героя */
+.hero > .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
 }
 
 /* ── Hero background image (responsive <picture>) ─────────────────────── */
@@ -99,12 +108,17 @@
   position: relative;
   z-index: 3;
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;                     /* займає весь вільний простір */
+  padding-bottom: 0;           /* Прибрали відступ, щоб статистика була в самому низу */
 }
 
 /* ── Title ─────────────────────────────────────────────────────────────── */
 
 .hero__badge {
   display: inline-flex;
+  align-self: flex-start; /* Запобігає розтягуванню по горизонталі у flex-column */
   align-items: center;
   gap: var(--space-sm);
   padding: 0.4rem 1rem;
@@ -163,8 +177,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-md);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-2xl);
+  margin-top: auto;            /* штовхає кнопки + статистику в нижню чверть */
+  padding-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
 /* ── Insurance Banner ──────────────────────────────────────────────────── */
@@ -196,8 +211,10 @@
 .hero__stats {
   display: flex;
   gap: var(--space-2xl);
-  padding-top: var(--space-xl);
+  padding-top: var(--space-lg);
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  margin-top: auto;            /* статистика притиснута до низу */
+  padding-bottom: var(--space-md); /* балансуємо відстань під текстом, щоб від цифр до низу було як від цифр до лінії */
 }
 
 .stat {
@@ -275,7 +292,7 @@
 /* Tablet (768px–1024px) — image is 768×400 */
 @media (max-width: 1024px) {
   .hero {
-    min-height: 70vh;
+    min-height: 80vh;
   }
 
   .hero__bg-image img {
@@ -290,9 +307,10 @@
 /* Mobile (≤768px) — image is 480×400 (nearly square) */
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
+    min-height: 100vh;
+    min-height: 100svh; /* iOS/Android — враховує панель браузера */
     padding-top: 70px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 
   .hero__bg-image img {
@@ -302,17 +320,18 @@
   .hero__badge {
     padding: 0.35rem 0.85rem;
     font-size: 0.75rem;
-    margin-bottom: 1rem;
+    margin-top: 0; /* Підтягує бейдж ближче до хедера */
+    margin-bottom: auto; /* Відштовхує заголовок вниз, зберігаючи пропорції */
   }
 
   .hero__title {
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Збільшено на ~20% (було 1.8rem) */
     margin-bottom: 0.8rem;
   }
   
   .hero__subtitle {
     font-size: 0.9rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: auto; /* Відступ знизу (штовхає кнопки вниз) */
   }
 
   .hero__stats {
@@ -320,6 +339,8 @@
     justify-content: space-between;
     gap: var(--space-sm);
     padding-top: var(--space-md);
+    padding-bottom: var(--space-sm); /* балансуємо на мобільному */
+    margin-top: 0; /* Знімаємо auto з десктопу */
   }
   
   .hero__stats .stat {
@@ -340,7 +361,9 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-sm); /* reduced gap */
-    margin-bottom: var(--space-xl);
+    margin-top: 0; /* Знімаємо auto з десктопу */
+    margin-bottom: var(--space-lg); /* Фіксований відступ між кнопками і статистикою */
+    padding-top: 0;
   }
 
   .hero__insurance-banner {
@@ -361,22 +384,25 @@
 /* Small mobile (≤480px) */
 @media (max-width: 480px) {
   .hero {
-    min-height: auto;
+    min-height: 100vh;
+    min-height: 100svh; /* iOS/Android — враховує панель браузера */
     padding-top: 80px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   .hero__bg-image img {
-    object-position: 55% 25%;
+    object-position: 55% 20%; /* людина видна зверху */
+    object-fit: cover;
   }
 
   .hero__title {
-    font-size: 1.6rem;
+    font-size: 1.9rem; /* Збільшено на ~20% (було 1.6rem) */
   }
 
   .hero__stats {
     gap: var(--space-xs);
     padding-top: var(--space-sm);
+    padding-bottom: var(--space-xs); /* балансуємо на найменших екранах */
   }
 
   .hero__stats .stat__number {
