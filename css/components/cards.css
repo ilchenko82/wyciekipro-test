@@ -135,9 +135,23 @@
   min-width: max-content;
 }
 
-.card--pricing.featured {
+.card--pricing.featured,
+.card--pricing-highlight {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-accent);
+}
+
+.card--pricing-highlight {
+  background: hsla(195, 85%, 48%, 0.05);
+  border-color: hsla(195, 85%, 48%, 0.2);
+}
+
+.card--pricing-highlight .card__price {
+  color: var(--color-primary);
+}
+
+.card--pricing-highlight .card__desc {
+  color: var(--color-text-light);
 }
 
 .card__price {

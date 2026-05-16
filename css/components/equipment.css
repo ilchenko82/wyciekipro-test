@@ -47,6 +47,51 @@
   flex: 1;
 }
 
+/* New Image variant */
+.equipment__card--with-img {
+  align-items: center;
+}
+
+.equipment__image-wrapper {
+  width: 180px;
+  height: 180px;
+  min-width: 180px;
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.equipment__img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.equipment__img--geofon {
+  /* Підвищення рівня насиченості (зеленого) на 50% */
+  filter: saturate(1.5);
+}
+
+.equipment__img--thermal {
+}
+
+.equipment__card:hover .equipment__img {
+  transform: scale(1.1);
+}
+
+.equipment__badge {
+  display: none; /* Removed as requested */
+}
+
 .equipment__card-title {
   font-size: var(--text-lg);
   font-weight: var(--fw-semibold);
@@ -67,8 +112,19 @@
 
   .equipment__card {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--space-md);
     padding: var(--space-lg);
+  }
+
+  .equipment__image-wrapper {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    padding: 8px;
+  }
+
+  .equipment__card-title {
+    font-size: var(--text-base);
   }
 }

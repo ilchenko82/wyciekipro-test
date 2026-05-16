@@ -99,11 +99,11 @@
         <span class="header__logo-text">Wycieki<span>Pro</span></span>
       </a>
       <nav class="nav" id="main-nav">
+        <a href="#pricing" class="nav__link">Cennik</a>
         <a href="#services" class="nav__link">Usługi</a>
         <a href="#equipment" class="nav__link">Sprzęt</a>
         <a href="#process" class="nav__link">Jak Szukamy</a>
         <a href="galeria.html" class="nav__link">Galeria</a>
-        <a href="#pricing" class="nav__link">Cennik</a>
         <a href="#reviews" class="nav__link">Opinie</a>
         <a href="#contact" class="nav__link">Kontakt</a>
       </nav>
@@ -129,11 +129,11 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
+    <a href="#pricing" class="nav__link">Cennik</a>
     <a href="#services" class="nav__link">Usługi</a>
     <a href="#equipment" class="nav__link">Sprzęt</a>
     <a href="#process" class="nav__link">Jak Szukamy</a>
     <a href="galeria.html" class="nav__link">Galeria</a>
-    <a href="#pricing" class="nav__link">Cennik</a>
     <a href="#reviews" class="nav__link">Opinie</a>
     <a href="#contact" class="nav__link">Kontakt</a>
     <a href="tel:+48793499678" class="btn btn--phone mobile-menu__phone"><svg width="18" height="18" viewBox="0 0 24 24"
@@ -221,8 +221,8 @@
         </div>
 
         <!-- Card 2: House / Commercial -->
-        <div class="card card--pricing">
-          <div class="pricing__tag">Domy / komercja</div>
+        <div class="card card--pricing card--pricing-highlight">
+          <div class="pricing__tag pricing__tag--accent">Domy / komercja</div>
           <p class="card__desc">Cena poszukiwania w domach, bliźniakach, biurach i innej komercji.</p>
           <div class="card__price">od 1 500 zł <span>brutto</span></div>
           <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
@@ -236,6 +236,15 @@
           <a href="#" class="btn btn--outline" onclick="openModal(event)">Umów wizytę</a>
         </div>
 
+      </div>
+
+      <!-- Insurance info banner moved here -->
+      <div class="pricing__insurance reveal" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+        <div class="pricing__insurance-text">
+          <strong>Koszt usługi możesz rozliczyć w ramach swojego ubezpieczenia (m.in. PZU, Warta).</strong>
+          Wystawiamy profesjonalny protokół z dokumentacją zdjęciową i wideo – otrzymasz od nas komplet dokumentów
+          gotowy do złożenia u ubezpieczyciela w ramach Twojej polisy.
+        </div>
       </div>
 
       <!-- Travel & footer notes -->
@@ -305,15 +314,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Insurance info banner moved here -->
-      <div class="pricing__insurance reveal" style="margin-top: var(--space-xl);">
-        <div class="pricing__insurance-text">
-          <strong>Koszt usługi możesz rozliczyć w ramach swojego ubezpieczenia (m.in. PZU, Warta).</strong>
-          Wystawiamy profesjonalny protokół z dokumentacją zdjęciową i wideo – otrzymasz od nas komplet dokumentów
-          gotowy do złożenia u ubezpieczyciela w ramach Twojej polisy.
-        </div>
-      </div>
     </div>
   </section>
 
@@ -369,8 +369,10 @@
         <p>Korzystamy z najnowocześniejszego sprzętu diagnostycznego</p>
       </div>
       <div class="equipment__grid reveal-stagger">
-        <div class="equipment__card" style="background: var(--color-bg-alt);">
-          <div class="equipment__card-number">1</div>
+        <div class="equipment__card equipment__card--with-img">
+          <div class="equipment__image-wrapper">
+            <img src="images/equipment/geofon.jpg" alt="Geofon wysokoczuły" class="equipment__img equipment__img--geofon">
+          </div>
           <div class="equipment__card-content">
             <h3 class="equipment__card-title">Geofon wysokoczuły</h3>
             <p class="equipment__card-text">Profesjonalny geofon elektroniczny Trubolab A-10T3 — wykrywa nawet
@@ -378,22 +380,28 @@
               wycieki przez beton, gips i grunt na głębokości do kilku metrów.</p>
           </div>
         </div>
-        <div class="equipment__card" style="background: var(--color-bg-alt);">
-          <div class="equipment__card-number">2</div>
+        <div class="equipment__card equipment__card--with-img">
+          <div class="equipment__image-wrapper">
+            <img src="images/equipment/termowizja.jpg" alt="Kamera termowizyjna" class="equipment__img equipment__img--thermal">
+          </div>
           <div class="equipment__card-content">
-            <h3 class="equipment__card-title">Kamera termowizyjna i wilgotnościomierz</h3>
-            <p class="equipment__card-text">Wykrywanie różnic temperatury oraz pomiar stopnia zawilgocenia, wskazujących na obecność wycieków za ścianami i w posadzkach.</p>
+            <h3 class="equipment__card-title">Kamera termowizyjna</h3>
+            <p class="equipment__card-text">Wykrywanie różnic temperatury та pomiar stopnia zawilgocenia, wskazujących na obecność wycieków za ścianami i w posadzkach.</p>
           </div>
         </div>
-        <div class="equipment__card" style="background: var(--color-bg-alt);">
-          <div class="equipment__card-number">3</div>
+        <div class="equipment__card equipment__card--with-img">
+          <div class="equipment__image-wrapper">
+            <img src="images/equipment/endoscope.png" alt="Endoskopy inspekcyjne" class="equipment__img">
+          </div>
           <div class="equipment__card-content">
             <h3 class="equipment__card-title">Endoskopy inspekcyjne</h3>
             <p class="equipment__card-text">Przemysłowe kamery do przeglądu rur, zabudów i trudno dostępnych przestrzeni. Posiadamy kilka różnych kamer do tego celu. Obraz HD.</p>
           </div>
         </div>
-        <div class="equipment__card" style="background: var(--color-bg-alt);">
-          <div class="equipment__card-number">4</div>
+        <div class="equipment__card equipment__card--with-img">
+          <div class="equipment__image-wrapper">
+            <img src="images/equipment/detector.png" alt="Gaz znacznikowy" class="equipment__img">
+          </div>
           <div class="equipment__card-content">
             <h3 class="equipment__card-title">Gaz znacznikowy i czujnik</h3>
             <p class="equipment__card-text">Wprowadzamy bezpieczną mieszankę H2/N2, którą po uwolnieniu wyłapujemy specjalistycznym, czułym detektorem gazu.</p>
@@ -408,7 +416,7 @@
     <div class="container">
       <div class="section-header reveal">
         <h2 style="color: var(--color-text-on-dark);">Jak Szukamy Wycieków</h2>
-        <p style="color: var(--color-text-on-dark-muted);">Sprawdzony 4-etapowy proces gwarantujący skuteczność</p>
+        <p style="color: var(--color-text-on-dark-muted);">Sprawdzony 5-etapowy proces gwarantujący skuteczność</p>
       </div>
       <div class="process__timeline reveal-stagger">
         <div class="process__step">
