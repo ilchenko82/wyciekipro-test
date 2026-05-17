@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 // --- CONFIGURATION ---
 // Email settings
-$to_email = "s.ilchenko.mb@gmail.com";
+$to_email = "wyciekipro@gmail.com";
 $subject = "Nowe zgłoszenie - WyciekiPro";
 
 // Telegram settings
