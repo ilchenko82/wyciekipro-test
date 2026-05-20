@@ -43,16 +43,29 @@ $email_sent = mail($to_email, $subject, $message_text, $headers);
 // --- SEND TO TELEGRAM ---
 $telegram_sent = false;
 if($telegram_token !== "INSERT_BOT_TOKEN_HERE" && $telegram_chat_id !== "INSERT_CHAT_ID_HERE") {
-    $telegram_url = "https://api.telegram.org/bot" . $telegram_token . "/sendMessage?chat_id=" . $telegram_chat_id . "&text=" . urlencode($message_text);
+    $telegram_url = "https://api.telegram.org/bot" . $telegram_token . "/sendMessage";
     
-    // Use file_get_contents to send the request
-    $response = @file_get_contents($telegram_url);
-    if($response !== false) {
+    $post_fields = array(
+        'chat_id' => $telegram_chat_id,
+        'text' => $message_text,
+    );
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $telegram_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_fields);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if($http_code == 200) {
         $telegram_sent = true;
     }
 }
 
 // --- RETURN RESPONSE ---
-// We consider it a success if either email or telegram was sent (or if telegram is not configured yet)
+// We consider it a success if either email or telegram was sent
 echo json_encode(['success' => true]);
 ?>
